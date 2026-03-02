@@ -1,11 +1,11 @@
 {
   "family": {
-    "power":    40,
-    "finances": 5000,
-    "politics": 20,
-    "media":    30,
+    "power":     40,
+    "finances":  5000,
+    "politics":  20,
+    "media":     30,
     "alliances": 0,
-    "threat":   15
+    "threat":    15
   },
   "consigliere": {
     "influence": 50,
@@ -24,8 +24,8 @@
     { "min":  70,  "max": 101, "label": "Saint"    }
   ],
   "gameOver": {
-    "threatThreshold":   90,
+    "threatThreshold":    90,
     "bankruptcyThreshold": -2000,
-    "loyaltyThreshold":  -30
+    "loyaltyThreshold":   -30
   }
 }

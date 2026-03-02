@@ -87,6 +87,11 @@
         <div class="legend-item"><div class="legend-dot" style="background:#f59e0b"></div> Casino</div>
         <div class="legend-item"><div class="legend-dot" style="background:#a78bfa"></div> Politique</div>
         <div class="legend-item"><div class="legend-dot" style="background:#f87171"></div> Industriel</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#e879f9"></div> Marché Noir</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#34d399"></div> International</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#fbbf24"></div> Église</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#38bdf8"></div> Hôpital</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#818cf8"></div> Université</div>
       </div>
       <div class="action-bar">
         <button class="action-btn" id="btn-attack"  onclick="doAction('attack')"  disabled>⚔ Attaquer</button>
@@ -130,6 +135,10 @@
         <div class="panel-section-title">Journal du Consigliere</div>
         <div class="log-area" id="log-area"></div>
       </div>
+      <div>
+        <div class="panel-section-title">Synergies Actives</div>
+        <div id="synergy-panel" style="font-size:0.75rem;font-style:italic;color:var(--text-dim)">Aucune synergie active.</div>
+      </div>
     </div>
   </div>
 </div>
@@ -151,10 +160,16 @@
   <button class="continue-btn" onclick="resumeFromAct()">Continuer ▶</button>
 </div>
 
-<div id="game-over" class="screen">
-  <div class="gameover-title"  id="go-title">La Chute</div>
-  <p   class="gameover-reason" id="go-reason"></p>
-  <button class="continue-btn" onclick="location.reload()">Recommencer</button>
+<div id="ending" class="screen">
+  <div class="ending-bg" id="ending-bg"></div>
+  <div class="ending-content">
+    <div class="ending-tag"   id="ending-tag">Fin</div>
+    <div class="ending-title" id="ending-title"></div>
+    <div class="ending-divider"></div>
+    <p class="ending-text"    id="ending-text"></p>
+    <div class="ending-stats" id="ending-stats"></div>
+    <button class="continue-btn" style="margin-top:2.5rem" onclick="location.reload()">Rejouer</button>
+  </div>
 </div>
 
 <script src="script.js"></script>

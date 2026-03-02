@@ -256,9 +256,9 @@ body::before {
 }
 .map-grid {
   display: grid;
-  grid-template-columns: repeat(3, 150px);
-  grid-template-rows: repeat(3, 110px);
-  gap: 6px;
+  grid-template-columns: repeat(5, 128px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 5px;
   position: relative; z-index: 2;
 }
 .territory {
@@ -457,3 +457,118 @@ body::before {
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--paper); }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+/* ══ NEW TERRITORY TYPE COLORS ══ */
+/* Handled via TYPE_COLORS in JS — no extra CSS needed */
+
+/* ══ SYNERGY BANNER ══ */
+.synergy-banner {
+  background: rgba(201,168,76,0.12);
+  border: 1px solid rgba(201,168,76,0.3);
+  padding: 0.4rem 0.6rem;
+  font-size: 0.7rem;
+  color: var(--gold);
+  font-style: italic;
+  margin-top: 0.4rem;
+  line-height: 1.5;
+}
+
+/* ══ ENDING SCREEN ══ */
+#ending {
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.ending-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  transition: background 1s;
+}
+
+.ending-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 640px;
+  padding: 2rem;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.ending-tag {
+  font-family: 'Special Elite', cursive;
+  font-size: 0.7rem;
+  letter-spacing: 0.4em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+.ending-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--gold-light);
+  line-height: 1.1;
+  text-shadow: 0 0 60px rgba(201,168,76,0.3);
+  margin-bottom: 0.5rem;
+}
+
+.ending-divider {
+  width: 200px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+  margin: 1.5rem auto;
+}
+
+.ending-text {
+  font-size: 1.05rem;
+  font-style: italic;
+  line-height: 2;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+}
+
+.ending-stats {
+  display: flex;
+  gap: 2rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ending-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+.ending-stat-val {
+  font-family: 'Special Elite', cursive;
+  font-size: 1.4rem;
+  color: var(--gold);
+}
+.ending-stat-label {
+  font-size: 0.65rem;
+  color: var(--text-dim);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* Couleurs de fond par type de fin */
+.ending-bg.victory  { background: radial-gradient(ellipse at center, #1a1200 0%, #0d0b08 70%); }
+.ending-bg.shadow   { background: radial-gradient(ellipse at center, #0d1a12 0%, #0d0b08 70%); }
+.ending-bg.exile    { background: radial-gradient(ellipse at center, #0d0f1a 0%, #0d0b08 70%); }
+.ending-bg.titan    { background: radial-gradient(ellipse at center, #1a0808 0%, #0d0b08 70%); }
+.ending-bg.martyr   { background: radial-gradient(ellipse at center, #0f0f1a 0%, #0d0b08 70%); }
+.ending-bg.chaos    { background: radial-gradient(ellipse at center, #1a0808 0%, #080808 70%); }
+.ending-bg.arrested { background: radial-gradient(ellipse at center, #1a0a0a 0%, #0d0b08 70%); }
+.ending-bg.bankrupt { background: radial-gradient(ellipse at center, #0a0d0a 0%, #0d0b08 70%); }
+.ending-bg.betrayed { background: radial-gradient(ellipse at center, #1a0808 0%, #0d0b08 70%); }

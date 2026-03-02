@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CONSIGLIERE — Nova Roma, 1975</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="intro" class="screen">
+  <div class="intro-ornament">✦ Nova Roma · 1975 ✦</div>
+  <h1 class="intro-title">Consigliere</h1>
+  <p class="intro-subtitle">Un jeu de pouvoir, de loyauté &amp; de trahison</p>
+  <div class="intro-divider"></div>
+  <p class="intro-lore">
+    Don Enzo Castellano vient de vous nommer son conseiller.
+    La ville est une proie. Les Scorpioni contrôlent le port.
+    Les Moretti veulent la paix… pour l'instant.<br><br>
+    Vos premiers mots définiront votre règne.
+  </p>
+  <p class="intro-choice-label">Votre première décision</p>
+  <div class="intro-choices">
+    <button class="intro-btn"        onclick="startGame('negotiate')">Négocier avec les Scorpioni</button>
+    <button class="intro-btn danger" onclick="startGame('attack')">Attaquer leurs lignes</button>
+  </div>
+</div>
+
+<div id="game" class="screen">
+  <div class="game-header">
+    <span class="header-title">✦ CONSIGLIERE</span>
+    <span class="header-act" id="act-label">Acte I — L'Ascension</span>
+    <div class="header-actions-left">
+      <span style="font-size:0.65rem;color:var(--text-dim);font-family:'Special Elite',cursive;margin-right:0.3rem;">ACTIONS</span>
+      <div class="action-pip" id="pip1"></div>
+      <div class="action-pip" id="pip2"></div>
+      <div class="action-pip" id="pip3"></div>
+    </div>
+    <span class="header-turn" id="turn-label">Tour 1 · 1975</span>
+  </div>
+  <div class="game-body">
+    <div class="panel-left">
+      <div>
+        <div class="panel-section-title">Le Consigliere</div>
+        <div class="stat-row">
+          <div class="stat-label">Influence <span class="val" id="stat-influence">50</span>/100</div>
+          <div class="stat-bar"><div class="stat-fill fill-gold" id="bar-influence" style="width:50%"></div></div>
+        </div>
+        <div class="stat-row">
+          <div class="stat-label">Loyauté <span class="val" id="stat-loyalty">60</span>/100</div>
+          <div class="stat-bar"><div class="stat-fill fill-blue" id="bar-loyalty" style="width:60%"></div></div>
+        </div>
+        <div class="stat-row">
+          <div class="stat-label">Ruse <span class="val" id="stat-cunning">55</span>/100</div>
+          <div class="stat-bar"><div class="stat-fill fill-purple" id="bar-cunning" style="width:55%"></div></div>
+        </div>
+        <div class="morale-display">
+          <span class="morale-label">Âme</span>
+          <span class="morale-value" id="morale-val">Neutre</span>
+        </div>
+      </div>
+      <div>
+        <div class="panel-section-title">Trésorerie</div>
+        <div class="finances-display">
+          <div class="finances-amount" id="finances-val">$5 000</div>
+          <div class="finances-sub"    id="income-val">+$0 / tour</div>
+        </div>
+      </div>
+      <div style="margin-top:auto">
+        <div class="panel-section-title">Familles</div>
+        <div style="display:flex;flex-direction:column;gap:0.4rem">
+          <div class="legend-item"><div class="legend-dot" style="background:var(--blood-light)"></div> Castellano (vous)</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#3b82f6"></div> Scorpioni</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#22c55e"></div> Moretti</div>
+          <div class="legend-item"><div class="legend-dot" style="background:var(--text-dim)"></div> Neutre</div>
+        </div>
+      </div>
+    </div>
+    <div class="panel-center">
+      <div class="map-container">
+        <div class="map-grid" id="map-grid"></div>
+      </div>
+      <div class="map-legend">
+        <div class="legend-item"><div class="legend-dot" style="background:#5dbb6e"></div> Résidentiel</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#60a5fa"></div> Port</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#f59e0b"></div> Casino</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#a78bfa"></div> Politique</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#f87171"></div> Industriel</div>
+      </div>
+      <div class="action-bar">
+        <button class="action-btn" id="btn-attack"  onclick="doAction('attack')"  disabled>⚔ Attaquer</button>
+        <button class="action-btn" id="btn-corrupt" onclick="doAction('corrupt')" disabled>💰 Corrompre</button>
+        <button class="action-btn" id="btn-improve" onclick="doAction('improve')" disabled>🔧 Améliorer</button>
+        <button class="action-btn end-turn"          onclick="endTurn()">Fin de Tour ▶</button>
+      </div>
+    </div>
+    <div class="panel-right">
+      <div>
+        <div class="panel-section-title">La Famille Castellano</div>
+        <div class="stat-row">
+          <div class="stat-label">Puissance <span class="val" id="stat-power">40</span></div>
+          <div class="stat-bar"><div class="stat-fill fill-red" id="bar-power" style="width:40%"></div></div>
+        </div>
+        <div class="stat-row">
+          <div class="stat-label">Réseau Politique <span class="val" id="stat-politics">20</span></div>
+          <div class="stat-bar"><div class="stat-fill fill-blue" id="bar-politics" style="width:20%"></div></div>
+        </div>
+        <div class="stat-row">
+          <div class="stat-label">Médias <span class="val" id="stat-media">30</span></div>
+          <div class="stat-bar"><div class="stat-fill fill-purple" id="bar-media" style="width:30%"></div></div>
+        </div>
+        <div class="stat-row">
+          <div class="stat-label">Alliances <span class="val" id="stat-alliances">50</span></div>
+          <div class="stat-bar"><div class="stat-fill fill-green" id="bar-alliances" style="width:50%"></div></div>
+        </div>
+        <div class="stat-row">
+          <div class="stat-label" style="color:var(--blood-light)">⚠ Menace Police <span class="val" id="stat-threat" style="color:var(--blood-light)">15</span></div>
+          <div class="stat-bar"><div class="stat-fill fill-orange" id="bar-threat" style="width:15%"></div></div>
+        </div>
+        <div class="threat-warning" id="threat-warning">La police s'approche. Réduisez votre exposition.</div>
+      </div>
+      <div>
+        <div class="panel-section-title">Rapport de Territoire</div>
+        <div id="territory-info" style="font-size:0.8rem;font-style:italic;color:var(--text-dim);padding:0.5rem;background:var(--paper);border:1px solid var(--border);">
+          Sélectionnez un territoire sur la carte pour voir les détails.
+        </div>
+      </div>
+      <div style="flex:1">
+        <div class="panel-section-title">Journal du Consigliere</div>
+        <div class="log-area" id="log-area"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="narrative-overlay" class="overlay">
+  <div class="overlay-card">
+    <div class="overlay-tag"    id="ov-tag">Événement Narratif</div>
+    <h2  class="overlay-title"  id="ov-title"></h2>
+    <p   class="overlay-text"   id="ov-text"></p>
+    <div class="overlay-choices" id="ov-choices"></div>
+  </div>
+</div>
+
+<div id="act-transition" class="screen">
+  <div class="act-number"      id="at-number">ACTE II</div>
+  <div class="act-subtitle"    id="at-subtitle"></div>
+  <div class="act-ellipse"     id="at-ellipse"></div>
+  <p   class="act-description" id="at-desc"></p>
+  <button class="continue-btn" onclick="resumeFromAct()">Continuer ▶</button>
+</div>
+
+<div id="game-over" class="screen">
+  <div class="gameover-title"  id="go-title">La Chute</div>
+  <p   class="gameover-reason" id="go-reason"></p>
+  <button class="continue-btn" onclick="location.reload()">Recommencer</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

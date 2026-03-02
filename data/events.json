@@ -1,158 +1,220 @@
 {
   "narrative": [
     {
-      "id": "ne1",
-      "tag": "Décision Cruciale",
-      "turn": 3,
+      "id": "ne1", "tag": "Décision Cruciale", "turn": 3,
       "title": "Le traître dans nos rangs",
       "text": "Don Enzo vous convoque à minuit. Son regard est de pierre. \"Mon cousin Salvatore parle aux Feds. J'ai des preuves.\" Il pose une photo sur la table. \"Règle ça. Ta façon.\"",
       "choices": [
-        {
-          "label": "Le faire disparaître discrètement",
-          "consequence": "+Puissance +15 · -Morale · +Loyauté +20",
-          "effects": { "power": 15, "morale": -15, "loyalty": 20, "threat": 5 },
-          "log": "Salvatore a été… arrangé. Le Don vous regarde différemment désormais."
-        },
-        {
-          "label": "L'envoyer en exil, loin de Nova Roma",
-          "consequence": "-Loyauté -5 · +Médias +10 · Risque résiduel",
-          "effects": { "loyalty": -5, "media": 10, "morale": 5 },
-          "log": "Salvatore est parti pour Miami. La menace est réduite, mais non éteinte."
-        },
-        {
-          "label": "Le retourner — qu'il devienne un atout",
-          "consequence": "+Ruse +10 · +Réseau Politique +15 · Risque élevé",
-          "effects": { "cunning": 10, "politics": 15, "threat": 10, "morale": 5 },
-          "log": "Salvatore travaille maintenant pour nous. Dangereux, mais utile."
-        }
+        { "label": "Le faire disparaître discrètement", "consequence": "+Puissance +15 · -Morale · +Loyauté +20", "effects": { "power": 15, "morale": -15, "loyalty": 20, "threat": 5 }, "log": "Salvatore a été… arrangé. Le Don vous regarde différemment désormais." },
+        { "label": "L'envoyer en exil loin de Nova Roma", "consequence": "-Loyauté -5 · +Médias +10 · Risque résiduel", "effects": { "loyalty": -5, "media": 10, "morale": 5 }, "log": "Salvatore est parti pour Miami. La menace est réduite, mais non éteinte." },
+        { "label": "Le retourner — qu'il devienne un atout", "consequence": "+Ruse +10 · +Réseau Politique +15 · Risque élevé", "effects": { "cunning": 10, "politics": 15, "threat": 10, "morale": 5 }, "log": "Salvatore travaille maintenant pour nous. Dangereux, mais utile." }
       ]
     },
     {
-      "id": "ne2",
-      "tag": "Crise Politique",
-      "turn": 6,
+      "id": "ne2", "tag": "Opportunité Politique", "turn": 5,
+      "title": "Le sénateur Ferrante",
+      "text": "Le sénateur Angelo Ferrante vous fait parvenir un message chiffré. Il a des dettes de jeu considérables. Il peut faire beaucoup pour la famille — mais il veut une garantie de protection avant tout.",
+      "choices": [
+        { "label": "Racheter ses dettes — le tenir à notre merci", "consequence": "-Finances $1500 · +Réseau Politique +25 · +Influence +10", "effects": { "finances": -1500, "politics": 25, "influence": 10 }, "log": "Ferrante est à nous. Un sénateur dans la poche, ça n'a pas de prix." },
+        { "label": "Refuser — les politiciens sont des pièges", "consequence": "Rien · +Morale +5 · Occasion manquée", "effects": { "morale": 5 }, "log": "Ferrante a trouvé d'autres arrangements. Une opportunité perdue." },
+        { "label": "Accepter, mais exiger un service immédiat d'abord", "consequence": "+Ruse +10 · +Réseau Politique +15 · -Loyauté Ferrante", "effects": { "cunning": 10, "politics": 15, "threat": 5 }, "log": "Ferrante a hésité, puis accepté. Il nous respecte autant qu'il nous craint." }
+      ]
+    },
+    {
+      "id": "ne3", "tag": "Crise Politique", "turn": 6,
       "title": "Le juge Moreno",
       "text": "Un juge intègre vient d'être nommé à la tête du tribunal de Nova Roma. Il a déjà refusé trois pots-de-vin. Ses enquêtes se rapprochent de nos affaires.",
       "choices": [
-        {
-          "label": "Le compromettre — trouver ses failles",
-          "consequence": "+Réseau Politique +20 · -Médias -10 · -Morale",
-          "effects": { "politics": 20, "media": -10, "morale": -10 },
-          "log": "Le juge Moreno a ses secrets maintenant. Nous avons les photos."
-        },
-        {
-          "label": "Le soudoyer via intermédiaires — $2000",
-          "consequence": "+Réseau Politique +15 · -Finances $2000",
-          "effects": { "politics": 15, "finances": -2000 },
-          "log": "L'argent a trouvé son chemin. Le juge… comprend mieux nos activités."
-        },
-        {
-          "label": "L'ignorer — il se fatiguera",
-          "consequence": "Rien pour l'instant · +Menace Police +15 dans 3 tours",
-          "effects": { "threat": 5 },
-          "log": "Nous ignorons Moreno. Pour l'instant."
-        }
+        { "label": "Le compromettre — trouver ses failles", "consequence": "+Réseau Politique +20 · -Médias -10 · -Morale", "effects": { "politics": 20, "media": -10, "morale": -10 }, "log": "Le juge Moreno a ses secrets maintenant. Nous avons les photos." },
+        { "label": "Le soudoyer via intermédiaires — $2000", "consequence": "+Réseau Politique +15 · -Finances $2000", "effects": { "politics": 15, "finances": -2000 }, "log": "L'argent a trouvé son chemin. Le juge comprend mieux nos activités." },
+        { "label": "L'ignorer — il se fatiguera", "consequence": "+Menace Police +5 · Rien d'autre pour l'instant", "effects": { "threat": 5 }, "log": "Nous ignorons Moreno. Pour l'instant." }
       ]
     },
     {
-      "id": "ne3",
-      "tag": "Alliance",
-      "turn": 9,
+      "id": "ne4", "tag": "Rivalité", "turn": 8,
+      "title": "L'héritier des Scorpioni",
+      "text": "Dante Scorpione, fils du Don rival, n'a que 24 ans. Mais il est impitoyable et ambitieux. Il vient de faire exécuter ses propres lieutenants pour inefficacité. Nos éclaireurs rapportent qu'il planifie quelque chose contre nous.",
+      "choices": [
+        { "label": "Frapper en premier — neutraliser la menace", "consequence": "+Puissance +10 · +Menace +20 · -Alliances -10", "effects": { "power": 10, "threat": 20, "alliances": -10, "morale": -5 }, "log": "Une frappe chirurgicale sur les Scorpioni. Dante a survécu, mais son organisation saigne." },
+        { "label": "Infiltrer son cercle — espionnage long terme", "consequence": "+Ruse +15 · +Influence +10 · Résultats dans 3 tours", "effects": { "cunning": 15, "influence": 10 }, "log": "Un de nos hommes est maintenant proche de Dante Scorpione. La patience sera récompensée." },
+        { "label": "Lui proposer un accord territorial", "consequence": "+Alliances +15 · -Puissance -5 · Trêve temporaire", "effects": { "alliances": 15, "power": -5 }, "log": "Dante a accepté la trêve. Pour combien de temps, personne ne le sait." }
+      ]
+    },
+    {
+      "id": "ne5", "tag": "Alliance", "turn": 9,
       "title": "Proposition Moretti",
       "text": "Marco Moretti se présente seul à votre bureau. Il tend la main. \"Nos familles se détruisent mutuellement pendant que les Scorpioni prospèrent. Allions-nous.\"",
       "choices": [
-        {
-          "label": "Accepter l'alliance — la force de l'unité",
-          "consequence": "+Alliances +40 · +Puissance +10 · Conflit Scorpioni",
-          "effects": { "alliances": 40, "power": 10 },
-          "log": "La main de Marco a été serrée. Nova Roma a changé ce soir."
-        },
-        {
-          "label": "Refuser — les Moretti resteront des rivaux",
-          "consequence": "-Alliances · +Puissance +5 · Indépendance totale",
-          "effects": { "alliances": -20, "power": 5 },
-          "log": "Marco est parti avec le regard de quelqu'un qui s'en souviendra."
-        },
-        {
-          "label": "Feindre l'accord pour mieux les piéger",
-          "consequence": "+Ruse +15 · Loyauté Moretti compromise · +Menace +10",
-          "effects": { "cunning": 15, "alliances": 10, "threat": 10, "morale": -10 },
-          "log": "Nous jouons un double jeu risqué avec les Moretti."
-        }
+        { "label": "Accepter l'alliance — la force de l'unité", "consequence": "+Alliances +40 · +Puissance +10 · Conflit Scorpioni", "effects": { "alliances": 40, "power": 10 }, "log": "La main de Marco a été serrée. Nova Roma a changé ce soir." },
+        { "label": "Refuser — les Moretti resteront des rivaux", "consequence": "-Alliances · +Puissance +5 · Indépendance totale", "effects": { "alliances": -20, "power": 5 }, "log": "Marco est parti avec le regard de quelqu'un qui s'en souviendra." },
+        { "label": "Feindre l'accord pour mieux les piéger", "consequence": "+Ruse +15 · +Menace +10 · -Morale", "effects": { "cunning": 15, "alliances": 10, "threat": 10, "morale": -10 }, "log": "Nous jouons un double jeu risqué avec les Moretti." }
       ]
     },
     {
-      "id": "ne4",
-      "tag": "Crise Médiatique",
-      "turn": 12,
-      "title": "L'Enquêtrice du Nova Roma Times",
+      "id": "ne6", "tag": "Dilemme Moral", "turn": 11,
+      "title": "Le commerce de l'ombre",
+      "text": "Un fournisseur colombien propose un accord exclusif. L'héroïne rapporterait dix fois plus que nos activités actuelles. Don Enzo hésite. Il vous demande votre avis. Cette décision vous appartient.",
+      "choices": [
+        { "label": "Accepter — la richesse avant la morale", "consequence": "+Finances $4000/tour · +Menace +30 · -Morale -25", "effects": { "finances": 4000, "threat": 30, "morale": -25 }, "log": "L'accord est conclu. L'argent afflue. La conscience aussi, parfois." },
+        { "label": "Refuser — la drogue détruit nos propres quartiers", "consequence": "+Morale +20 · +Alliances +10 · Occasion refusée", "effects": { "morale": 20, "alliances": 10 }, "log": "Le Don vous regarde avec quelque chose qui ressemble à du respect." },
+        { "label": "Sous-traiter à une famille alliée — toucher une commission", "consequence": "+Finances $1500/tour · +Menace +10 · -Morale -10", "effects": { "finances": 1500, "threat": 10, "morale": -10 }, "log": "Un compromis cynique. L'argent rentre sans salir directement nos mains." }
+      ]
+    },
+    {
+      "id": "ne7", "tag": "Trahison Interne", "turn": 13,
+      "title": "Le capitaine ambitieux",
+      "text": "Vito Mancini, votre meilleur capitaine de terrain, envisage de partir chez les Scorpioni avec une partie de nos hommes. Une lettre interceptée le prouve. Il est loyal depuis dix ans. Mais il est ambitieux.",
+      "choices": [
+        { "label": "Le confronter en privé — lui offrir une promotion", "consequence": "+Loyauté +10 · +Puissance +5 · -Finances $800", "effects": { "loyalty": 10, "power": 5, "finances": -800 }, "log": "Mancini est resté. Satisfait, pour l'instant. La loyauté a un prix." },
+        { "label": "L'éliminer avant qu'il parte", "consequence": "+Puissance -10 · -Morale -15 · +Loyauté +5 (par la peur)", "effects": { "power": -10, "morale": -15, "loyalty": 5, "threat": 8 }, "log": "Mancini a disparu. Les autres capitaines ont reçu le message." },
+        { "label": "Le laisser partir — surveiller ses mouvements", "consequence": "-Puissance -15 · +Ruse +10 · Intel précieux", "effects": { "power": -15, "cunning": 10 }, "log": "Mancini est chez les Scorpioni. Mais il ignore qu'il travaille pour nous maintenant." }
+      ]
+    },
+    {
+      "id": "ne8", "tag": "Crise Médiatique", "turn": 14,
+      "title": "L'enquêtrice du Nova Roma Times",
       "text": "Rosa Delgado publie demain un article liant la famille Castellano aux meurtres non résolus de 1973. Ses sources sont solides. Son éditeur aussi.",
       "choices": [
-        {
-          "label": "Racheter le journal — le contrôle de l'information",
-          "consequence": "-Finances $3000 · +Médias +30",
-          "effects": { "finances": -3000, "media": 30, "morale": -5 },
-          "log": "Le Nova Roma Times est maintenant... plus compréhensif."
-        },
-        {
-          "label": "Menacer Delgado pour qu'elle se taise",
-          "consequence": "+Menace Police +20 · -Médias -5 · -Morale",
-          "effects": { "threat": 20, "media": -5, "morale": -10 },
-          "log": "Delgado a reçu le message. Elle a aussi envoyé ses notes à un collègue."
-        },
-        {
-          "label": "Laisser paraître — préparer notre défense",
-          "consequence": "-Alliances -15 · -Puissance -10 · +Morale +5",
-          "effects": { "alliances": -15, "power": -10, "morale": 10 },
-          "log": "L'article a paru. La rue nous regarde différemment."
-        }
+        { "label": "Racheter le journal — le contrôle de l'information", "consequence": "-Finances $3000 · +Médias +30", "effects": { "finances": -3000, "media": 30, "morale": -5 }, "log": "Le Nova Roma Times est maintenant... plus compréhensif." },
+        { "label": "Menacer Delgado pour qu'elle se taise", "consequence": "+Menace +20 · -Médias -5 · -Morale", "effects": { "threat": 20, "media": -5, "morale": -10 }, "log": "Delgado a reçu le message. Elle a aussi envoyé ses notes à un collègue." },
+        { "label": "Laisser paraître — préparer notre défense légale", "consequence": "-Alliances -15 · -Puissance -10 · +Morale +5", "effects": { "alliances": -15, "power": -10, "morale": 10 }, "log": "L'article a paru. La rue nous regarde différemment." }
       ]
     },
     {
-      "id": "ne5",
-      "tag": "Acte Final",
-      "turn": 15,
-      "title": "La Nuit des Longs Couteaux",
-      "text": "Don Enzo est mourant. Dans son dernier souffle, il vous désigne comme successeur. Mais trois capitaines s'y opposent. Ce soir, tout se décide.",
+      "id": "ne9", "tag": "Affrontement Majeur", "turn": 16,
+      "title": "La guerre des docks",
+      "text": "Les Scorpioni ont attaqué trois de nos entrepôts en une nuit. Cinq de nos hommes sont morts. Don Enzo, affaibli par la maladie, vous délègue la réponse. La ville retient son souffle.",
       "choices": [
-        {
-          "label": "Écraser les dissidents — la force comme réponse",
-          "consequence": "+Puissance +25 · +Loyauté +30 · -Médias -20 · +Menace +25",
-          "effects": { "power": 25, "loyalty": 30, "media": -20, "threat": 25 },
-          "log": "Une nuit de sang. Vous êtes maintenant Don. À quel prix."
-        },
-        {
-          "label": "Négocier — partager le pouvoir pour l'instant",
-          "consequence": "+Alliances +20 · -Influence -10 · Stabilité",
-          "effects": { "alliances": 20, "influence": -10 },
-          "log": "Un conseil de famille. Pas le pouvoir absolu, mais la survie."
-        },
-        {
-          "label": "Disparaître — laisser les autres se détruire",
-          "consequence": "-Loyauté -50 · Survie garantie · Fin neutre",
-          "effects": { "loyalty": -50, "morale": 20 },
-          "log": "Vous quittez Nova Roma. La ville brûle derrière vous."
-        }
+        { "label": "Riposter avec une force écrasante — la guerre totale", "consequence": "+Puissance +20 · +Menace +25 · -Finances $2000 · Guerre ouverte", "effects": { "power": 20, "threat": 25, "finances": -2000, "morale": -5 }, "log": "Nova Roma entre en guerre. Les rues de South Quarter brûlent." },
+        { "label": "Frapper uniquement Dante Scorpione — ciblé, net", "consequence": "+Puissance +10 · +Menace +15 · +Ruse +10", "effects": { "power": 10, "threat": 15, "cunning": 10 }, "log": "Dante a survécu à l'attentat. Mais il boite. Et il a peur." },
+        { "label": "Demander une médiation aux familles neutres", "consequence": "+Alliances +20 · -Puissance -5 · Paix négociée", "effects": { "alliances": 20, "power": -5, "morale": 5 }, "log": "Une trêve a été obtenue. Nova Roma respire. Pour combien de temps ?" }
+      ]
+    },
+    {
+      "id": "ne10", "tag": "Menace Fédérale", "turn": 18,
+      "title": "L'inspecteur Hargrove",
+      "text": "L'inspecteur fédéral James Hargrove vient d'arriver à Nova Roma avec une équipe de dix agents. Il a déjà démantelé deux familles à Chicago. Il demande à vous rencontrer \"de manière informelle\". Une convocation déguisée.",
+      "choices": [
+        { "label": "Accepter la réunion — jouer le citoyen exemplaire", "consequence": "+Médias +15 · -Ruse -5 · Hargrove en sait plus sur vous", "effects": { "media": 15, "cunning": -5, "threat": -10 }, "log": "La réunion s'est bien passée. Hargrove n'a rien obtenu. Pour l'instant." },
+        { "label": "Refuser et faire pression par le sénateur Ferrante", "consequence": "-Menace -15 · +Réseau Politique +10 · Hargrove frustré", "effects": { "threat": -15, "politics": 10 }, "log": "Ferrante a fait des appels. Hargrove a été rappelé à Washington. Temporairement." },
+        { "label": "Disparaître dans l'ombre — aucune trace", "consequence": "-Influence -10 · +Ruse +15 · Hargrove cherche toujours", "effects": { "influence": -10, "cunning": 15 }, "log": "Vous êtes introuvable. Cela suscitera des questions, mais aucune preuve." }
+      ]
+    },
+    {
+      "id": "ne11", "tag": "Crise de Succession", "turn": 20,
+      "title": "Le Don agonise",
+      "text": "Don Enzo est alité depuis trois semaines. Les médecins ont dit six mois au mieux. Dans le couloir de sa chambre, les trois capitaines se regardent en chiens de faïence. Chacun veut le trône. Vous êtes le seul à pouvoir empêcher la guerre civile.",
+      "choices": [
+        { "label": "Soutenir publiquement un capitaine loyal à vous", "consequence": "+Influence +20 · +Loyauté +15 · Inimitié des deux autres", "effects": { "influence": 20, "loyalty": 15, "power": 5 }, "log": "Le capitaine Russo vous doit tout désormais. Et il le sait." },
+        { "label": "Vous positionner comme successeur légitime du Don", "consequence": "+Influence +30 · -Loyauté -20 · Conflit imminent", "effects": { "influence": 30, "loyalty": -20, "threat": 15 }, "log": "Vous avez déclaré vos intentions. Le Don a eu l'air… pas mécontent." },
+        { "label": "Rester neutre — observer les capitaines s'entre-déchirer", "consequence": "+Ruse +20 · -Influence -10 · Chaos temporaire", "effects": { "cunning": 20, "influence": -10, "power": -10 }, "log": "Vous regardez le feu de loin. Parfois c'est la meilleure position." }
+      ]
+    },
+    {
+      "id": "ne12", "tag": "Alliance ou Guerre", "turn": 22,
+      "title": "L'ultimatum Moretti",
+      "text": "Don Giuseppe Moretti en personne vous écrit. Il vous donne 48 heures pour céder deux territoires ou la famille Moretti rejoint les Scorpioni dans une coalition contre vous. Le vieux parrain joue son va-tout.",
+      "choices": [
+        { "label": "Céder les territoires — acheter la paix", "consequence": "-2 territoires · +Alliances +30 · Moretti satisfait", "effects": { "alliances": 30, "power": -15, "morale": -5 }, "log": "Deux territoires cédés. La paix a un coût. Mais vous respirez." },
+        { "label": "Refuser fermement — montrer nos crocs", "consequence": "+Puissance +10 · -Alliances -30 · Guerre sur deux fronts", "effects": { "power": 10, "alliances": -30, "threat": 20 }, "log": "Le refus est envoyé. Nova Roma va brûler. Mais vous ne courberez pas l'échine." },
+        { "label": "Contre-proposer — un territoire contre une alliance offensive", "consequence": "+Ruse +15 · +Alliances +15 · -Puissance -5", "effects": { "cunning": 15, "alliances": 15, "power": -5 }, "log": "Moretti a réfléchi deux jours. Il a accepté. Un vrai négociateur." }
+      ]
+    },
+    {
+      "id": "ne13", "tag": "Justice", "turn": 24,
+      "title": "Le Grand Jury",
+      "text": "Un grand jury fédéral vient d'être constitué. Treize membres. Ils ont des témoins, des écoutes, et des documents. L'acte d'accusation vise Don Enzo — mais votre nom figure en caractères gras dans les annexes.",
+      "choices": [
+        { "label": "Faire disparaître deux témoins clés", "consequence": "-Morale -20 · +Menace -20 · Crime grave", "effects": { "morale": -20, "threat": -20 }, "log": "Deux témoins ont soudainement perdu la mémoire. Le jury tâtonne." },
+        { "label": "Utiliser Ferrante pour torpiller le jury", "consequence": "-Réseau Politique -20 · +Menace -15 · Ferrante brûlé", "effects": { "politics": -20, "threat": -15 }, "log": "Ferrante a utilisé ses dernières cartouches. Il est maintenant inutilisable." },
+        { "label": "Coopérer partiellement — sacrifier un bouc émissaire", "consequence": "+Médias +20 · -Loyauté -15 · +Menace -25", "effects": { "media": 20, "loyalty": -15, "threat": -25, "morale": -10 }, "log": "Un capitaine mineur a été sacrifié. Vous ressortirez blanchi. Lui pas." }
+      ]
+    },
+    {
+      "id": "ne14", "tag": "Retour Inattendu", "turn": 26,
+      "title": "Le retour de Salvatore",
+      "text": "Salvatore — que vous pensiez mort, exilé, ou neutralisé — est de retour à Nova Roma. Il a des alliés. Il a des preuves. Et une rancœur qui a mûri pendant des années. Il vous envoie un message : \"Je sais tout.\"",
+      "choices": [
+        { "label": "Le rencontrer seul — négocier son silence", "consequence": "-Finances $2000 · +Ruse +10 · Accord précaire", "effects": { "finances": -2000, "cunning": 10 }, "log": "Salvatore a pris l'argent. Pour l'instant. Ce n'est pas terminé." },
+        { "label": "En finir définitivement cette fois", "consequence": "-Morale -20 · +Menace +15 · Résolution permanente", "effects": { "morale": -20, "threat": 15, "loyalty": 10 }, "log": "Salvatore ne reviendra plus. Le problème aussi." },
+        { "label": "L'intégrer dans la famille — le transformer en allié", "consequence": "+Alliances +10 · +Influence +15 · Risque à long terme", "effects": { "alliances": 10, "influence": 15, "morale": 5 }, "log": "Salvatore est de retour dans le clan. Il connaît trop de secrets pour être ailleurs." }
+      ]
+    },
+    {
+      "id": "ne15", "tag": "Acte Final", "turn": 28,
+      "title": "La Nuit des Longs Couteaux",
+      "text": "Don Enzo est mort ce matin à l'aube. Dans son testament, il vous désigne. Mais trois capitaines s'arment. Les Scorpioni ont envoyé des voitures aux frontières de nos territoires. Et Hargrove vient d'atterrir à l'aéroport. Cette nuit, tout se joue.",
+      "choices": [
+        { "label": "Écraser tout — la nuit de sang", "consequence": "+Puissance +25 · +Loyauté +30 · -Médias -20 · +Menace +25", "effects": { "power": 25, "loyalty": 30, "media": -20, "threat": 25, "morale": -20 }, "log": "Une nuit de sang. L'aube se lève sur une ville dévastée. Vous régnez." },
+        { "label": "Négocier — un conseil de famille, pas un trône", "consequence": "+Alliances +20 · -Influence -10 · Stabilité durable", "effects": { "alliances": 20, "influence": -10, "morale": 10 }, "log": "Un conseil de famille. Pas le pouvoir absolu, mais peut-être la sagesse." },
+        { "label": "Fuir — disparaître avec ce que vous avez accumulé", "consequence": "-Loyauté -50 · +Morale +20 · Survie · Fin neutre", "effects": { "loyalty": -50, "morale": 20 }, "log": "Vous quittez Nova Roma avant l'aube. La ville brûle derrière vous." }
       ]
     }
   ],
+
   "random": [
     { "text": "Un policier honnête enquête sur nos activités au port.", "effects": { "threat": 10 }, "tag": "Alerte" },
     { "text": "Une grève paralyse les docks — revenus réduits ce tour.", "effects": { "finances": -600 }, "tag": "Économie" },
     { "text": "Un camion de livraison disparaît avec $800 de recettes.", "effects": { "finances": -800 }, "tag": "Incident" },
-    { "text": "Un informateur livre des détails sur les Scorpioni.", "effects": { "cunning": 5, "power": 5 }, "tag": "Intel" },
-    { "text": "Les Moretti offrent une trêve temporaire.", "effects": { "alliances": 10, "threat": -5 }, "tag": "Diplomatie" },
-    { "text": "Un élu municipal cherche un 'arrangement discret'.", "effects": { "politics": 15, "finances": -500 }, "tag": "Opportunité" },
+    { "text": "Un informateur livre des détails précieux sur les Scorpioni.", "effects": { "cunning": 5, "power": 5 }, "tag": "Intel" },
+    { "text": "Les Moretti offrent une trêve temporaire — tensions apaisées.", "effects": { "alliances": 10, "threat": -5 }, "tag": "Diplomatie" },
+    { "text": "Un élu municipal cherche un arrangement discret.", "effects": { "politics": 15, "finances": -500 }, "tag": "Opportunité" },
     { "text": "Raid surprise dans un de nos établissements.", "effects": { "threat": 15, "finances": -400 }, "tag": "Police" },
-    { "text": "Une rumeur circule — votre loyauté est questionnée.", "effects": { "loyalty": -10, "influence": -5 }, "tag": "Danger" },
-    { "text": "Un journaliste curieux flaire quelque chose.", "effects": { "media": -10, "threat": 8 }, "tag": "Presse" },
-    { "text": "Les Scorpioni ont leurs propres problèmes internes.", "effects": { "power": 5 }, "tag": "Opportunité" }
+    { "text": "Une rumeur circule — votre loyauté est questionnée par le Don.", "effects": { "loyalty": -10, "influence": -5 }, "tag": "Danger" },
+    { "text": "Un journaliste trop curieux flaire quelque chose au casino.", "effects": { "media": -10, "threat": 8 }, "tag": "Presse" },
+    { "text": "Bonne nouvelle : les Scorpioni ont leurs propres problèmes internes.", "effects": { "power": 5 }, "tag": "Opportunité" },
+    { "text": "Un de nos bookmakers est arrêté. Il parle, mais sait peu.", "effects": { "threat": 8, "finances": -300 }, "tag": "Police" },
+    { "text": "Un incendie d'origine inconnue détruit un entrepôt au port.", "effects": { "finances": -1200, "threat": 5 }, "tag": "Incident" },
+    { "text": "Un réseau de paris clandestins s'avère extrêmement profitable ce mois-ci.", "effects": { "finances": 900 }, "tag": "Finance" },
+    { "text": "Un juge en retraite cherche à monnayer son carnet d'adresses.", "effects": { "politics": 10, "finances": -400 }, "tag": "Opportunité" },
+    { "text": "La mairie de Nova Roma lance un plan de rénovation urbaine — nos propriétés prennent de la valeur.", "effects": { "finances": 600, "media": 5 }, "tag": "Économie" },
+    { "text": "Un de nos soldats est tué dans une embuscade Scorpioni au Chinatown.", "effects": { "power": -8, "loyalty": -5 }, "tag": "Guerre" },
+    { "text": "Le syndicat des dockers accepte une enveloppe mensuelle — paix sociale garantie.", "effects": { "finances": -300, "threat": -8 }, "tag": "Accord" },
+    { "text": "Un comptable véreux propose de blanchir des fonds via une chaîne de restaurants.", "effects": { "finances": 700, "threat": 5, "morale": -5 }, "tag": "Finance" },
+    { "text": "Un pasteur du quartier prêche contre la mafia à la radio locale.", "effects": { "media": -8, "alliances": -5 }, "tag": "Presse" },
+    { "text": "Les Moretti ont perdu un territoire face aux Scorpioni — l'équilibre des forces change.", "effects": { "alliances": -10, "power": 5 }, "tag": "Géopolitique" },
+    { "text": "Votre réseau téléphonique est sur écoute — découverte d'un mouchard.", "effects": { "threat": 12, "cunning": 5 }, "tag": "Sécurité" },
+    { "text": "Un ancien boxeur professionnel veut travailler pour la famille. Utile.", "effects": { "power": 8 }, "tag": "Recrutement" },
+    { "text": "La police saisit un chargement de cigarettes de contrebande au port.", "effects": { "finances": -500, "threat": 6 }, "tag": "Police" },
+    { "text": "Un diplomate étranger s'avère être un contact utile pour le blanchiment international.", "effects": { "finances": 800, "politics": 8 }, "tag": "Intel" },
+    { "text": "Votre réputation de fairness dans le quartier attire de nouveaux alliés.", "effects": { "alliances": 8, "morale": 5 }, "tag": "Réputation" },
+    { "text": "Un rival mineur est éliminé par les Scorpioni — ses hommes cherchent un nouveau parrain.", "effects": { "power": 10, "threat": 5 }, "tag": "Opportunité" },
+    { "text": "Un de nos commerces de façade est audité par le fisc.", "effects": { "finances": -700, "threat": 10 }, "tag": "Justice" },
+    { "text": "Une tempête paralyse le port pendant 48h — pertes sur les revenus.", "effects": { "finances": -400 }, "tag": "Événement" },
+    { "text": "Rumeur : le chef de la police envisage de se présenter aux élections — il cherche des financements.", "effects": { "politics": 5, "threat": -5 }, "tag": "Politique" },
+    { "text": "Un de vos capitaines règle une vieille dette d'honneur sans votre aval. Cela complique les choses.", "effects": { "threat": 8, "loyalty": -8, "power": -5 }, "tag": "Interne" }
   ],
+
   "acts": [
-    { "num": 1, "name": "L'Ascension",           "ellipse": "",                               "desc": "Vous venez de prendre votre poste. La ville est à conquérir, pièce par pièce.",                        "startTurn": 1,  "endTurn": 5  },
-    { "num": 2, "name": "La Guerre des Rues",     "ellipse": "— Dix-huit mois plus tard… —",   "desc": "Le sang a coulé. Nova Roma se redessine. Vos ennemis se sont renforcés, comme vous.",               "startTurn": 6,  "endTurn": 10 },
-    { "num": 3, "name": "Le Temps des Alliances", "ellipse": "— Deux ans plus tard… —",        "desc": "La force brute ne suffit plus. La politique, la trahison, les compromis — votre vrai domaine.",      "startTurn": 11, "endTurn": 15 },
-    { "num": 4, "name": "L'Ombre du Pouvoir",     "ellipse": "— Un an plus tard… —",           "desc": "Vous êtes au sommet, mais le sommet est le lieu le plus dangereux.",                                 "startTurn": 16, "endTurn": 18 },
-    { "num": 5, "name": "Le Jugement Dernier",    "ellipse": "— La nuit du règlement de comptes —", "desc": "Tout ce que vous avez construit sera mis à l'épreuve ce soir.",                               "startTurn": 19, "endTurn": 99 }
+    {
+      "num": 1, "name": "L'Ascension",
+      "ellipse": "",
+      "desc": "Vous venez de prendre votre poste. La ville est à conquérir, pièce par pièce. Chaque décision forge votre réputation.",
+      "startTurn": 1, "endTurn": 5
+    },
+    {
+      "num": 2, "name": "La Guerre des Rues",
+      "ellipse": "— Dix-huit mois plus tard… —",
+      "desc": "Le sang a coulé. Nova Roma se redessine. Vos ennemis se sont renforcés, comme vous. Les alliances se font et se défont dans l'ombre.",
+      "startTurn": 6, "endTurn": 11
+    },
+    {
+      "num": 3, "name": "Le Temps des Alliances",
+      "ellipse": "— Deux ans plus tard… —",
+      "desc": "La force brute ne suffit plus. Politique, trahison, compromis — votre vrai domaine. La ville entière est un échiquier.",
+      "startTurn": 12, "endTurn": 17
+    },
+    {
+      "num": 4, "name": "L'Ombre du Pouvoir",
+      "ellipse": "— Un an plus tard… —",
+      "desc": "Vous êtes au sommet, mais le sommet est le lieu le plus dangereux. Don Enzo vieillit. Les fédéraux s'impatientent. Vos alliés doutent.",
+      "startTurn": 18, "endTurn": 23
+    },
+    {
+      "num": 5, "name": "Le Jugement Dernier",
+      "ellipse": "— La nuit du règlement de comptes —",
+      "desc": "Tout ce que vous avez construit sera mis à l'épreuve cette nuit. Le Don est mort. Nova Roma tremble. Votre héritage s'écrit maintenant.",
+      "startTurn": 24, "endTurn": 99
+    }
   ]
 }

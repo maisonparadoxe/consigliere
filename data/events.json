@@ -1,1 +1,158 @@
-
+{
+  "narrative": [
+    {
+      "id": "ne1",
+      "tag": "Décision Cruciale",
+      "turn": 3,
+      "title": "Le traître dans nos rangs",
+      "text": "Don Enzo vous convoque à minuit. Son regard est de pierre. \"Mon cousin Salvatore parle aux Feds. J'ai des preuves.\" Il pose une photo sur la table. \"Règle ça. Ta façon.\"",
+      "choices": [
+        {
+          "label": "Le faire disparaître discrètement",
+          "consequence": "+Puissance +15 · -Morale · +Loyauté +20",
+          "effects": { "power": 15, "morale": -15, "loyalty": 20, "threat": 5 },
+          "log": "Salvatore a été… arrangé. Le Don vous regarde différemment désormais."
+        },
+        {
+          "label": "L'envoyer en exil, loin de Nova Roma",
+          "consequence": "-Loyauté -5 · +Médias +10 · Risque résiduel",
+          "effects": { "loyalty": -5, "media": 10, "morale": 5 },
+          "log": "Salvatore est parti pour Miami. La menace est réduite, mais non éteinte."
+        },
+        {
+          "label": "Le retourner — qu'il devienne un atout",
+          "consequence": "+Ruse +10 · +Réseau Politique +15 · Risque élevé",
+          "effects": { "cunning": 10, "politics": 15, "threat": 10, "morale": 5 },
+          "log": "Salvatore travaille maintenant pour nous. Dangereux, mais utile."
+        }
+      ]
+    },
+    {
+      "id": "ne2",
+      "tag": "Crise Politique",
+      "turn": 6,
+      "title": "Le juge Moreno",
+      "text": "Un juge intègre vient d'être nommé à la tête du tribunal de Nova Roma. Il a déjà refusé trois pots-de-vin. Ses enquêtes se rapprochent de nos affaires.",
+      "choices": [
+        {
+          "label": "Le compromettre — trouver ses failles",
+          "consequence": "+Réseau Politique +20 · -Médias -10 · -Morale",
+          "effects": { "politics": 20, "media": -10, "morale": -10 },
+          "log": "Le juge Moreno a ses secrets maintenant. Nous avons les photos."
+        },
+        {
+          "label": "Le soudoyer via intermédiaires — $2000",
+          "consequence": "+Réseau Politique +15 · -Finances $2000",
+          "effects": { "politics": 15, "finances": -2000 },
+          "log": "L'argent a trouvé son chemin. Le juge… comprend mieux nos activités."
+        },
+        {
+          "label": "L'ignorer — il se fatiguera",
+          "consequence": "Rien pour l'instant · +Menace Police +15 dans 3 tours",
+          "effects": { "threat": 5 },
+          "log": "Nous ignorons Moreno. Pour l'instant."
+        }
+      ]
+    },
+    {
+      "id": "ne3",
+      "tag": "Alliance",
+      "turn": 9,
+      "title": "Proposition Moretti",
+      "text": "Marco Moretti se présente seul à votre bureau. Il tend la main. \"Nos familles se détruisent mutuellement pendant que les Scorpioni prospèrent. Allions-nous.\"",
+      "choices": [
+        {
+          "label": "Accepter l'alliance — la force de l'unité",
+          "consequence": "+Alliances +40 · +Puissance +10 · Conflit Scorpioni",
+          "effects": { "alliances": 40, "power": 10 },
+          "log": "La main de Marco a été serrée. Nova Roma a changé ce soir."
+        },
+        {
+          "label": "Refuser — les Moretti resteront des rivaux",
+          "consequence": "-Alliances · +Puissance +5 · Indépendance totale",
+          "effects": { "alliances": -20, "power": 5 },
+          "log": "Marco est parti avec le regard de quelqu'un qui s'en souviendra."
+        },
+        {
+          "label": "Feindre l'accord pour mieux les piéger",
+          "consequence": "+Ruse +15 · Loyauté Moretti compromise · +Menace +10",
+          "effects": { "cunning": 15, "alliances": 10, "threat": 10, "morale": -10 },
+          "log": "Nous jouons un double jeu risqué avec les Moretti."
+        }
+      ]
+    },
+    {
+      "id": "ne4",
+      "tag": "Crise Médiatique",
+      "turn": 12,
+      "title": "L'Enquêtrice du Nova Roma Times",
+      "text": "Rosa Delgado publie demain un article liant la famille Castellano aux meurtres non résolus de 1973. Ses sources sont solides. Son éditeur aussi.",
+      "choices": [
+        {
+          "label": "Racheter le journal — le contrôle de l'information",
+          "consequence": "-Finances $3000 · +Médias +30",
+          "effects": { "finances": -3000, "media": 30, "morale": -5 },
+          "log": "Le Nova Roma Times est maintenant... plus compréhensif."
+        },
+        {
+          "label": "Menacer Delgado pour qu'elle se taise",
+          "consequence": "+Menace Police +20 · -Médias -5 · -Morale",
+          "effects": { "threat": 20, "media": -5, "morale": -10 },
+          "log": "Delgado a reçu le message. Elle a aussi envoyé ses notes à un collègue."
+        },
+        {
+          "label": "Laisser paraître — préparer notre défense",
+          "consequence": "-Alliances -15 · -Puissance -10 · +Morale +5",
+          "effects": { "alliances": -15, "power": -10, "morale": 10 },
+          "log": "L'article a paru. La rue nous regarde différemment."
+        }
+      ]
+    },
+    {
+      "id": "ne5",
+      "tag": "Acte Final",
+      "turn": 15,
+      "title": "La Nuit des Longs Couteaux",
+      "text": "Don Enzo est mourant. Dans son dernier souffle, il vous désigne comme successeur. Mais trois capitaines s'y opposent. Ce soir, tout se décide.",
+      "choices": [
+        {
+          "label": "Écraser les dissidents — la force comme réponse",
+          "consequence": "+Puissance +25 · +Loyauté +30 · -Médias -20 · +Menace +25",
+          "effects": { "power": 25, "loyalty": 30, "media": -20, "threat": 25 },
+          "log": "Une nuit de sang. Vous êtes maintenant Don. À quel prix."
+        },
+        {
+          "label": "Négocier — partager le pouvoir pour l'instant",
+          "consequence": "+Alliances +20 · -Influence -10 · Stabilité",
+          "effects": { "alliances": 20, "influence": -10 },
+          "log": "Un conseil de famille. Pas le pouvoir absolu, mais la survie."
+        },
+        {
+          "label": "Disparaître — laisser les autres se détruire",
+          "consequence": "-Loyauté -50 · Survie garantie · Fin neutre",
+          "effects": { "loyalty": -50, "morale": 20 },
+          "log": "Vous quittez Nova Roma. La ville brûle derrière vous."
+        }
+      ]
+    }
+  ],
+  "random": [
+    { "text": "Un policier honnête enquête sur nos activités au port.", "effects": { "threat": 10 }, "tag": "Alerte" },
+    { "text": "Une grève paralyse les docks — revenus réduits ce tour.", "effects": { "finances": -600 }, "tag": "Économie" },
+    { "text": "Un camion de livraison disparaît avec $800 de recettes.", "effects": { "finances": -800 }, "tag": "Incident" },
+    { "text": "Un informateur livre des détails sur les Scorpioni.", "effects": { "cunning": 5, "power": 5 }, "tag": "Intel" },
+    { "text": "Les Moretti offrent une trêve temporaire.", "effects": { "alliances": 10, "threat": -5 }, "tag": "Diplomatie" },
+    { "text": "Un élu municipal cherche un 'arrangement discret'.", "effects": { "politics": 15, "finances": -500 }, "tag": "Opportunité" },
+    { "text": "Raid surprise dans un de nos établissements.", "effects": { "threat": 15, "finances": -400 }, "tag": "Police" },
+    { "text": "Une rumeur circule — votre loyauté est questionnée.", "effects": { "loyalty": -10, "influence": -5 }, "tag": "Danger" },
+    { "text": "Un journaliste curieux flaire quelque chose.", "effects": { "media": -10, "threat": 8 }, "tag": "Presse" },
+    { "text": "Les Scorpioni ont leurs propres problèmes internes.", "effects": { "power": 5 }, "tag": "Opportunité" }
+  ],
+  "acts": [
+    { "num": 1, "name": "L'Ascension",           "ellipse": "",                               "desc": "Vous venez de prendre votre poste. La ville est à conquérir, pièce par pièce.",                        "startTurn": 1,  "endTurn": 5  },
+    { "num": 2, "name": "La Guerre des Rues",     "ellipse": "— Dix-huit mois plus tard… —",   "desc": "Le sang a coulé. Nova Roma se redessine. Vos ennemis se sont renforcés, comme vous.",               "startTurn": 6,  "endTurn": 10 },
+    { "num": 3, "name": "Le Temps des Alliances", "ellipse": "— Deux ans plus tard… —",        "desc": "La force brute ne suffit plus. La politique, la trahison, les compromis — votre vrai domaine.",      "startTurn": 11, "endTurn": 15 },
+    { "num": 4, "name": "L'Ombre du Pouvoir",     "ellipse": "— Un an plus tard… —",           "desc": "Vous êtes au sommet, mais le sommet est le lieu le plus dangereux.",                                 "startTurn": 16, "endTurn": 18 },
+    { "num": 5, "name": "Le Jugement Dernier",    "ellipse": "— La nuit du règlement de comptes —", "desc": "Tout ce que vous avez construit sera mis à l'épreuve ce soir.",                               "startTurn": 19, "endTurn": 99 }
+  ]
+}

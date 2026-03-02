@@ -1,0 +1,11 @@
+[
+  { "id":0, "name":"Little Sicilia",     "type":"Résidentiel", "income":400,  "threatBonus":0,  "defense":60, "adjacent":[1,3],     "owner":"castellano" },
+  { "id":1, "name":"Downtown",           "type":"Casino",      "income":1000, "threatBonus":5,  "defense":40, "adjacent":[0,2,4],   "owner":"neutral"    },
+  { "id":2, "name":"Financial District", "type":"Politique",   "income":200,  "threatBonus":0,  "defense":50, "adjacent":[1,5],     "owner":"neutral"    },
+  { "id":3, "name":"Les Docks",          "type":"Port",        "income":800,  "threatBonus":20, "defense":30, "adjacent":[0,4,6],   "owner":"scorpioni"  },
+  { "id":4, "name":"City Hall",          "type":"Politique",   "income":100,  "threatBonus":0,  "defense":70, "adjacent":[1,3,5,7], "owner":"neutral"    },
+  { "id":5, "name":"Eastside",           "type":"Résidentiel", "income":300,  "threatBonus":0,  "defense":40, "adjacent":[2,4,8],   "owner":"moretti"    },
+  { "id":6, "name":"Chinatown",          "type":"Industriel",  "income":500,  "threatBonus":10, "defense":35, "adjacent":[3,7],     "owner":"scorpioni"  },
+  { "id":7, "name":"The Heights",        "type":"Résidentiel", "income":350,  "threatBonus":5,  "defense":45, "adjacent":[4,6,8],   "owner":"neutral"    },
+  { "id":8, "name":"South Quarter",      "type":"Industriel",  "income":450,  "threatBonus":15, "defense":25, "adjacent":[5,7],     "owner":"moretti"    }
+]

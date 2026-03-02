@@ -1,0 +1,31 @@
+{
+  "family": {
+    "power":    40,
+    "finances": 5000,
+    "politics": 20,
+    "media":    30,
+    "alliances": 0,
+    "threat":   15
+  },
+  "consigliere": {
+    "influence": 50,
+    "loyalty":   60,
+    "cunning":   55,
+    "morale":    0
+  },
+  "actionsPerTurn": 3,
+  "morale_labels": [
+    { "min": -100, "max": -60, "label": "Damné"    },
+    { "min": -60,  "max": -30, "label": "Corrompu" },
+    { "min": -30,  "max": -10, "label": "Trouble"  },
+    { "min": -10,  "max":  10, "label": "Neutre"   },
+    { "min":  10,  "max":  40, "label": "Vertueux" },
+    { "min":  40,  "max":  70, "label": "Juste"    },
+    { "min":  70,  "max": 101, "label": "Saint"    }
+  ],
+  "gameOver": {
+    "threatThreshold":   90,
+    "bankruptcyThreshold": -2000,
+    "loyaltyThreshold":  -30
+  }
+}

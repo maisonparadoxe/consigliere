@@ -1,11 +1,47 @@
 [
-  { "id":0, "name":"Little Sicilia",     "type":"Résidentiel", "income":400,  "threatBonus":0,  "defense":60, "adjacent":[1,3],     "owner":"castellano" },
-  { "id":1, "name":"Downtown",           "type":"Casino",      "income":1000, "threatBonus":5,  "defense":40, "adjacent":[0,2,4],   "owner":"neutral"    },
-  { "id":2, "name":"Financial District", "type":"Politique",   "income":200,  "threatBonus":0,  "defense":50, "adjacent":[1,5],     "owner":"neutral"    },
-  { "id":3, "name":"Les Docks",          "type":"Port",        "income":800,  "threatBonus":20, "defense":30, "adjacent":[0,4,6],   "owner":"scorpioni"  },
-  { "id":4, "name":"City Hall",          "type":"Politique",   "income":100,  "threatBonus":0,  "defense":70, "adjacent":[1,3,5,7], "owner":"neutral"    },
-  { "id":5, "name":"Eastside",           "type":"Résidentiel", "income":300,  "threatBonus":0,  "defense":40, "adjacent":[2,4,8],   "owner":"moretti"    },
-  { "id":6, "name":"Chinatown",          "type":"Industriel",  "income":500,  "threatBonus":10, "defense":35, "adjacent":[3,7],     "owner":"scorpioni"  },
-  { "id":7, "name":"The Heights",        "type":"Résidentiel", "income":350,  "threatBonus":5,  "defense":45, "adjacent":[4,6,8],   "owner":"neutral"    },
-  { "id":8, "name":"South Quarter",      "type":"Industriel",  "income":450,  "threatBonus":15, "defense":25, "adjacent":[5,7],     "owner":"moretti"    }
+  {
+    "id": 0, "name": "Little Sicilia", "type": "Résidentiel",
+    "desc": "Le cœur historique de la communauté italienne. Loyauté inconditionnelle, mais peu de revenus.",
+    "income": 400, "threatBonus": 0, "defense": 60, "adjacent": [1, 3], "owner": "castellano"
+  },
+  {
+    "id": 1, "name": "Downtown", "type": "Casino",
+    "desc": "Le casino Bellagio Noir brille de mille feux. L'argent coule à flots, mais les regards aussi.",
+    "income": 1000, "threatBonus": 5, "defense": 40, "adjacent": [0, 2, 4], "owner": "neutral"
+  },
+  {
+    "id": 2, "name": "Financial District", "type": "Politique",
+    "desc": "Banquiers, avocats, élus. Peu de revenus directs, mais un levier politique inestimable.",
+    "income": 200, "threatBonus": 0, "defense": 50, "adjacent": [1, 5], "owner": "neutral"
+  },
+  {
+    "id": 3, "name": "Les Docks", "type": "Port",
+    "desc": "Chaque cargo qui entre ou sort passe par ici. Revenus colossaux, surveillance maximale.",
+    "income": 800, "threatBonus": 20, "defense": 30, "adjacent": [0, 4, 6], "owner": "scorpioni"
+  },
+  {
+    "id": 4, "name": "City Hall", "type": "Politique",
+    "desc": "Mairie, tribunaux, commissariat central. Contrôler cet endroit, c'est contrôler la loi.",
+    "income": 100, "threatBonus": 0, "defense": 70, "adjacent": [1, 3, 5, 7], "owner": "neutral"
+  },
+  {
+    "id": 5, "name": "Eastside", "type": "Résidentiel",
+    "desc": "Quartier ouvrier tenu par les Moretti depuis deux générations. Difficile à prendre, facile à perdre.",
+    "income": 300, "threatBonus": 0, "defense": 40, "adjacent": [2, 4, 8], "owner": "moretti"
+  },
+  {
+    "id": 6, "name": "Chinatown", "type": "Industriel",
+    "desc": "Ateliers clandestins, restaurants de façade, trafic discret. Une économie parallèle prospère.",
+    "income": 500, "threatBonus": 10, "defense": 35, "adjacent": [3, 7], "owner": "scorpioni"
+  },
+  {
+    "id": 7, "name": "The Heights", "type": "Résidentiel",
+    "desc": "Quartier résidentiel aisé. Les familles bourgeoises vivent ici, ignorant leurs voisins dans l'ombre.",
+    "income": 350, "threatBonus": 5, "defense": 45, "adjacent": [4, 6, 8], "owner": "neutral"
+  },
+  {
+    "id": 8, "name": "South Quarter", "type": "Industriel",
+    "desc": "Entrepôts, fonderies, camions de nuit. Un nœud logistique idéal pour faire transiter n'importe quoi.",
+    "income": 450, "threatBonus": 15, "defense": 25, "adjacent": [5, 7], "owner": "moretti"
+  }
 ]
